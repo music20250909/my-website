@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>我的精緻小站💖</title>
+
+    <!-- 正文清爽字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 標題手寫字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 上方導覽列 -->
+    <nav class="header-bar">
+        <a href="home.html" class="nav-link">首頁</a>
+        <a href="songs.html" class="nav-link">創作歌曲</a>
+        <a href="about.html" class="nav-link">關於我</a>
+        
+    </nav>
+
+    <!-- 中間可滾動內容 -->
+    <div class="content-container">
+        <iframe id="content-frame" src="home.html"></iframe>
+    </div>
+
+    <!-- 底部固定導覽列 -->
+    <footer class="footer-bar">
+        <p style="margin:0;">© 2025 我的精緻小站 |<a href="contact.html" class="footer-link">聯絡我們</a></p>
+
+        <!-- 點我換背景按鈕 -->
+        <button id="magicBtn">點我換背景💖</button>
+
+        <!-- 小巧透明播放器 -->
+        <div class="mini-player">
+            <button id="prev">⏮</button>
+            <button id="play">💖</button>
+            <button id="next">⏭</button>
+            <span id="current-song">月下獨酌</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

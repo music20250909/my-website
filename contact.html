@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言給我</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .contact-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-box">
+    <h2>留言給我💌</h2>
+    <input type="text" id="name" placeholder="你的名字">
+    <input type="email" id="email" placeholder="你的Email">
+    <textarea id="message" placeholder="你的訊息"></textarea>
+    <button onclick="sendEmail()">送出</button>
+  </div>
+
+  <script>
+    function sendEmail() {
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const message = encodeURIComponent(document.getElementById('message').value);
+
+      if(!name || !email || !message){
+        alert("請填寫所有欄位");
+        return;
+      }
+
+      const mailtoLink = `mailto:你的信箱@example.com?subject=網站留言：${name}&body=名字：${name}%0AEmail：${email}%0A訊息：${message}`;
+      window.location.href = mailtoLink;
+    }
+  </script>
+</body>
+</html>

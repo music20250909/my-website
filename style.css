@@ -1,0 +1,99 @@
+body {
+    font-family: 'Noto Sans TC', "微軟正黑體", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+    text-align: center;
+}
+
+/* 上方導覽列 */
+.header-bar {
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 240, 245, 0.5);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    color: #ff69b4;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.header-bar a {
+    color: #ff69b4;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.header-bar a:hover {
+    text-decoration: underline;
+}
+
+/* 中間可滾動區塊 */
+.content-container {
+    margin-top: 100px; /* 避開上方導覽列 */
+    margin-bottom: 80px; /* 避開底部導覽列 */
+    height: calc(100vh - 180px);
+    overflow: hidden;
+}
+.content-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 底部導覽列 */
+.footer-bar {
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 240, 245, 0.5);
+    backdrop-filter: blur(8px);
+    color: #ff69b4;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+.footer-bar a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+.footer-bar a:hover {
+    text-decoration: underline;
+}
+
+/* 極簡粉嫩玻璃播放器 */
+.mini-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: transparent;
+    color: #ff69b4;
+}
+.mini-player button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, color 0.3s;
+}
+.mini-player button:hover {
+    color: #ff1493;
+    transform: scale(1.2);
+}
+.mini-player span {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
